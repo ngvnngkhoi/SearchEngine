@@ -1,0 +1,35 @@
+// Declares binary plugin and its required JavaFX classpath
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10' // Use the latest version available
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add your project dependencies here
+    // Example: implementation 'org.apache.commons:commons-math3:3.6.1'
+
+    // JavaFX dependencies
+    implementation 'org.openjfx:javafx-controls:17'
+    implementation 'org.openjfx:javafx-fxml:17'
+    implementation 'org.openjfx:javafx-graphics:17'
+    // Include other modules as needed
+}
+
+javafx {
+    version = '17' // Ensure this matches the version in your dependencies
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
+    // Add other modules you are using
+}
+
+application {
+    // Replace with your application'sg main class
+    mainClassName = 'src/main/javaSearchEngineGUI'
+}
